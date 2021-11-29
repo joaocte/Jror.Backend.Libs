@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<TargetFrameworks>net5.0</TargetFrameworks>
-		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
 		<Authors>João Roberto</Authors>
 		<Description>Pacote que oferece todas as abstrações para uso da APIs BackEnd desenvolvida por João Roberto</Description>
 		<PackageDescription>Pacote que oferece todas as abstrações para uso da APIs BackEnd desenvolvida por João Roberto</PackageDescription>
@@ -12,6 +12,7 @@
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<OpenApiGenerateDocuments>false</OpenApiGenerateDocuments>
 		<Version>1.0.0</Version>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
