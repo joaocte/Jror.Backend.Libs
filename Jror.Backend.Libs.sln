@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jror.Backend.Libs.Domain", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jror.Backend.Libs.Domain.Core", "Jror.Backend.Libs.Domain.Core\Jror.Backend.Libs.Domain.Core.csproj", "{A9604FBB-ED2E-4131-899E-D802956668E8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{613B7F33-9069-411A-B085-52CDD979D097}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jror.Backend.Libs.Framework", "Jror.Backend.Libs.Framework\Jror.Backend.Libs.Framework.csproj", "{DBEB396B-92CC-4C0E-9D0C-E5F23834C2D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +47,10 @@ Global
 		{A9604FBB-ED2E-4131-899E-D802956668E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9604FBB-ED2E-4131-899E-D802956668E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9604FBB-ED2E-4131-899E-D802956668E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBEB396B-92CC-4C0E-9D0C-E5F23834C2D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBEB396B-92CC-4C0E-9D0C-E5F23834C2D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBEB396B-92CC-4C0E-9D0C-E5F23834C2D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBEB396B-92CC-4C0E-9D0C-E5F23834C2D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +61,7 @@ Global
 		{A52165F0-FE8D-48E4-AD99-7317F14D7BBF} = {4810EDF6-63AA-484D-8DB6-40052A0BFB6D}
 		{07BFB1FE-4269-4744-A9A7-C82B0040BC74} = {4810EDF6-63AA-484D-8DB6-40052A0BFB6D}
 		{A9604FBB-ED2E-4131-899E-D802956668E8} = {4810EDF6-63AA-484D-8DB6-40052A0BFB6D}
+		{DBEB396B-92CC-4C0E-9D0C-E5F23834C2D7} = {613B7F33-9069-411A-B085-52CDD979D097}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8FA74BA9-7ADA-49CE-9823-DCEEA8E546E1}
