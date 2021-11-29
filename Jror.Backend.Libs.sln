@@ -11,23 +11,27 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jror.Backend.Libs.Api", "Jr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{4810EDF6-63AA-484D-8DB6-40052A0BFB6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jror.Backend.Libs.Domain.Abstractions", "Jror.Backend.Libs.Domain.Abstractions\Jror.Backend.Libs.Domain.Abstractions.csproj", "{A52165F0-FE8D-48E4-AD99-7317F14D7BBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jror.Backend.Libs.Domain.Abstractions", "Jror.Backend.Libs.Domain.Abstractions\Jror.Backend.Libs.Domain.Abstractions.csproj", "{A52165F0-FE8D-48E4-AD99-7317F14D7BBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jror.Backend.Libs.Domain", "Jror.Backend.Libs.Domain\Jror.Backend.Libs.Domain.csproj", "{07BFB1FE-4269-4744-A9A7-C82B0040BC74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jror.Backend.Libs.Domain", "Jror.Backend.Libs.Domain\Jror.Backend.Libs.Domain.csproj", "{07BFB1FE-4269-4744-A9A7-C82B0040BC74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jror.Backend.Libs.Domain.Core", "Jror.Backend.Libs.Domain.Core\Jror.Backend.Libs.Domain.Core.csproj", "{A9604FBB-ED2E-4131-899E-D802956668E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jror.Backend.Libs.Domain.Core", "Jror.Backend.Libs.Domain.Core\Jror.Backend.Libs.Domain.Core.csproj", "{A9604FBB-ED2E-4131-899E-D802956668E8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{613B7F33-9069-411A-B085-52CDD979D097}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jror.Backend.Libs.Framework", "Jror.Backend.Libs.Framework\Jror.Backend.Libs.Framework.csproj", "{DBEB396B-92CC-4C0E-9D0C-E5F23834C2D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jror.Backend.Libs.Framework", "Jror.Backend.Libs.Framework\Jror.Backend.Libs.Framework.csproj", "{DBEB396B-92CC-4C0E-9D0C-E5F23834C2D7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{E11534E5-820B-4144-A533-15B0810AA851}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jror.Backend.Libs.Infrastructure.MongoDB.Abstractions", "Jror.Backend.Libs.Infrastructure.MongoDB.Abstractions\Jror.Backend.Libs.Infrastructure.MongoDB.Abstractions.csproj", "{FCA02449-F7C3-42FF-9C34-3093AFBEAA1C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jror.Backend.Libs.Infrastructure.MongoDB.Abstractions", "Jror.Backend.Libs.Infrastructure.MongoDB.Abstractions\Jror.Backend.Libs.Infrastructure.MongoDB.Abstractions.csproj", "{FCA02449-F7C3-42FF-9C34-3093AFBEAA1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jror.Backend.Libs.Infrastructure.Data.Shared", "Jror.Backend.Libs.Infrastructure.Data.Shared\Jror.Backend.Libs.Infrastructure.Data.Shared.csproj", "{CF907A70-2B48-41A2-B574-12CAC7BCF301}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jror.Backend.Libs.Infrastructure.Data.Shared", "Jror.Backend.Libs.Infrastructure.Data.Shared\Jror.Backend.Libs.Infrastructure.Data.Shared.csproj", "{CF907A70-2B48-41A2-B574-12CAC7BCF301}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jror.Backend.Libs.Infrastructure.MongoDB", "Jror.Backend.Libs.Infrastructure.MongoDB\Jror.Backend.Libs.Infrastructure.MongoDB.csproj", "{69966A63-A265-44DF-BDF5-DE48D2F35CB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jror.Backend.Libs.Infrastructure.MongoDB", "Jror.Backend.Libs.Infrastructure.MongoDB\Jror.Backend.Libs.Infrastructure.MongoDB.csproj", "{69966A63-A265-44DF-BDF5-DE48D2F35CB3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Messaging", "Messaging", "{EE14B82E-34A7-4F76-816B-63E4252F37D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jror.Backend.Libs.Messaging.Abstractions", "Jror.Backend.Libs.Messaging.Abstractions\Jror.Backend.Libs.Messaging.Abstractions.csproj", "{BA43C310-6692-48B2-B9EB-FD7AA424DD23}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +75,10 @@ Global
 		{69966A63-A265-44DF-BDF5-DE48D2F35CB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69966A63-A265-44DF-BDF5-DE48D2F35CB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69966A63-A265-44DF-BDF5-DE48D2F35CB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA43C310-6692-48B2-B9EB-FD7AA424DD23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA43C310-6692-48B2-B9EB-FD7AA424DD23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA43C310-6692-48B2-B9EB-FD7AA424DD23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA43C310-6692-48B2-B9EB-FD7AA424DD23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -85,6 +93,7 @@ Global
 		{FCA02449-F7C3-42FF-9C34-3093AFBEAA1C} = {E11534E5-820B-4144-A533-15B0810AA851}
 		{CF907A70-2B48-41A2-B574-12CAC7BCF301} = {E11534E5-820B-4144-A533-15B0810AA851}
 		{69966A63-A265-44DF-BDF5-DE48D2F35CB3} = {E11534E5-820B-4144-A533-15B0810AA851}
+		{BA43C310-6692-48B2-B9EB-FD7AA424DD23} = {EE14B82E-34A7-4F76-816B-63E4252F37D0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8FA74BA9-7ADA-49CE-9823-DCEEA8E546E1}
