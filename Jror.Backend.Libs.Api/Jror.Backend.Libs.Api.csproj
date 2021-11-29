@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net5.0</TargetFrameworks>
+		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+		<Authors>João Roberto</Authors>
+		<Description>Pacote que oferece todas as abstrações para uso da APIs BackEnd desenvolvida por João Roberto</Description>
+		<PackageDescription>Pacote que oferece todas as abstrações para uso da APIs BackEnd desenvolvida por João Roberto</PackageDescription>
+		<PackageProjectUrl>https://github.com/joaocte/Jror.Backend.Libs</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/joaocte/Jror.Backend.Libs</RepositoryUrl>
+		<RepositoryType>Public</RepositoryType>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<OpenApiGenerateDocuments>false</OpenApiGenerateDocuments>
+		<Version>1.0.0</Version>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.0.0" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\Jror.Backend.Libs.API.Abstractions\Jror.Backend.Libs.API.Abstractions.csproj" />
+	</ItemGroup>
+	
+</Project>
