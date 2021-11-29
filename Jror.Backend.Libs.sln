@@ -21,6 +21,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jror.Backend.Libs.Framework", "Jror.Backend.Libs.Framework\Jror.Backend.Libs.Framework.csproj", "{DBEB396B-92CC-4C0E-9D0C-E5F23834C2D7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{E11534E5-820B-4144-A533-15B0810AA851}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jror.Backend.Libs.Infrastructure.MongoDB.Abstractions", "Jror.Backend.Libs.Infrastructure.MongoDB.Abstractions\Jror.Backend.Libs.Infrastructure.MongoDB.Abstractions.csproj", "{FCA02449-F7C3-42FF-9C34-3093AFBEAA1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jror.Backend.Libs.Infrastructure.Data.Shared", "Jror.Backend.Libs.Infrastructure.Data.Shared\Jror.Backend.Libs.Infrastructure.Data.Shared.csproj", "{CF907A70-2B48-41A2-B574-12CAC7BCF301}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jror.Backend.Libs.Infrastructure.MongoDB", "Jror.Backend.Libs.Infrastructure.MongoDB\Jror.Backend.Libs.Infrastructure.MongoDB.csproj", "{69966A63-A265-44DF-BDF5-DE48D2F35CB3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +59,18 @@ Global
 		{DBEB396B-92CC-4C0E-9D0C-E5F23834C2D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBEB396B-92CC-4C0E-9D0C-E5F23834C2D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DBEB396B-92CC-4C0E-9D0C-E5F23834C2D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCA02449-F7C3-42FF-9C34-3093AFBEAA1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCA02449-F7C3-42FF-9C34-3093AFBEAA1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCA02449-F7C3-42FF-9C34-3093AFBEAA1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCA02449-F7C3-42FF-9C34-3093AFBEAA1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF907A70-2B48-41A2-B574-12CAC7BCF301}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF907A70-2B48-41A2-B574-12CAC7BCF301}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF907A70-2B48-41A2-B574-12CAC7BCF301}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF907A70-2B48-41A2-B574-12CAC7BCF301}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69966A63-A265-44DF-BDF5-DE48D2F35CB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69966A63-A265-44DF-BDF5-DE48D2F35CB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69966A63-A265-44DF-BDF5-DE48D2F35CB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69966A63-A265-44DF-BDF5-DE48D2F35CB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +82,9 @@ Global
 		{07BFB1FE-4269-4744-A9A7-C82B0040BC74} = {4810EDF6-63AA-484D-8DB6-40052A0BFB6D}
 		{A9604FBB-ED2E-4131-899E-D802956668E8} = {4810EDF6-63AA-484D-8DB6-40052A0BFB6D}
 		{DBEB396B-92CC-4C0E-9D0C-E5F23834C2D7} = {613B7F33-9069-411A-B085-52CDD979D097}
+		{FCA02449-F7C3-42FF-9C34-3093AFBEAA1C} = {E11534E5-820B-4144-A533-15B0810AA851}
+		{CF907A70-2B48-41A2-B574-12CAC7BCF301} = {E11534E5-820B-4144-A533-15B0810AA851}
+		{69966A63-A265-44DF-BDF5-DE48D2F35CB3} = {E11534E5-820B-4144-A533-15B0810AA851}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8FA74BA9-7ADA-49CE-9823-DCEEA8E546E1}

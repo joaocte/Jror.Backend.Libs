@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>netstandard2.0;netstandard2.1;net5.0</TargetFrameworks>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<Authors>João Roberto</Authors>
+		<Description>Pacote que oferece todas as abstrações de infrastrutura para uso da APIs BackEnd desenvolvida por João Roberto</Description>
+		<PackageDescription>Pacote que oferece todas as abstrações de infrastrutura para uso da APIs BackEnd desenvolvida por João Roberto</PackageDescription>
+		<PackageProjectUrl>https://github.com/joaocte/Jror.Backend.Libs</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/joaocte/Jror.Backend.Libs</RepositoryUrl>
+		<RepositoryType>Public</RepositoryType>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<Version>1.0.1</Version>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="6.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="6.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="6.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+		<PackageReference Include="MongoDB.Driver" Version="2.14.0" />
+		<PackageReference Include="ServiceStack.Common" Version="5.13.2" />
+		<PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\Jror.Backend.Libs.Infrastructure.Data.Shared\Jror.Backend.Libs.Infrastructure.Data.Shared.csproj" />
+	  <ProjectReference Include="..\Jror.Backend.Libs.Infrastructure.MongoDB.Abstractions\Jror.Backend.Libs.Infrastructure.MongoDB.Abstractions.csproj" />
+	</ItemGroup>
+</Project>
