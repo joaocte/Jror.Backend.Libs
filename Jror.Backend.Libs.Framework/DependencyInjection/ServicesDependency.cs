@@ -9,11 +9,11 @@ namespace Jror.Backend.Libs.Framework.DependencyInjection
     {
         public static void AddServiceDependencyJrorFramework(this IServiceCollection services)
         {
-            services.AddServiceDependencyJrFrameworkNotificationContext();
-            services.AddServiceDependencyJrFrameworkExceptionFilter();
+            services.AddServiceDependencyJrorFrameworkNotificationContext();
+            services.AddServiceDependencyJrorFrameworkExceptionFilter();
         }
 
-        public static void AddServiceDependencyJrFrameworkNotificationContext(this IServiceCollection services)
+        public static void AddServiceDependencyJrorFrameworkNotificationContext(this IServiceCollection services)
         {
             services.AddScoped<INotificationContext, NotificationContext>();
             services.AddMvcCore(options =>
@@ -22,7 +22,7 @@ namespace Jror.Backend.Libs.Framework.DependencyInjection
             });
         }
 
-        public static void AddServiceDependencyJrFrameworkExceptionFilter(this IServiceCollection services)
+        public static void AddServiceDependencyJrorFrameworkExceptionFilter(this IServiceCollection services)
         {
             services.AddMvcCore(options =>
             {

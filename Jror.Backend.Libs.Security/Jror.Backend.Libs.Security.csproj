@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net5.0</TargetFrameworks>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<Authors>João Roberto</Authors>
+		<Description>Pacote que oferece todas as implementações de segurança para uso da APIs BackEnd desenvolvida por João Roberto</Description>
+		<PackageDescription>Pacote que oferece todas as implementações de segurança para uso da APIs BackEnd desenvolvida por João Roberto</PackageDescription>
+		<PackageProjectUrl>https://github.com/joaocte/Jror.Backend.Libs</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/joaocte/Jror.Backend.Libs</RepositoryUrl>
+		<RepositoryType>Public</RepositoryType>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<Version>1.0.1</Version>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<OpenApiGenerateDocuments>false</OpenApiGenerateDocuments>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.12" />
+		<PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.2" />
+		<PackageReference Include="MongoDB.Bson" Version="2.14.0" />
+		<PackageReference Include="ServiceStack.Common" Version="5.13.2" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.14.1" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\Jror.Backend.Libs.Framework\Jror.Backend.Libs.Framework.csproj" />
+	  <ProjectReference Include="..\Jror.Backend.Libs.Security.Abstractions\Jror.Backend.Libs.Security.Abstractions.csproj" />
+	</ItemGroup>
+
+</Project>
