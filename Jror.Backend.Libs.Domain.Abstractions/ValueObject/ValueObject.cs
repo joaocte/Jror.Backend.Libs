@@ -1,13 +1,12 @@
-﻿using Jr.Backend.Libs.Domain.Abstractions;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 
 namespace Jror.Backend.Libs.Domain.Abstractions.ValueObject
 {
-    public abstract class GenericValueObject : Entity
+    public abstract class ValueObject
     {
-        protected static bool EqualOperator(GenericValueObject obj, GenericValueObject otherObj)
+        protected static bool EqualOperator(ValueObject obj, ValueObject otherObj)
         {
             if (obj is null ^ otherObj is null)
             {
@@ -16,17 +15,17 @@ namespace Jror.Backend.Libs.Domain.Abstractions.ValueObject
             return obj?.Equals(otherObj) != false;
         }
 
-        public static GenericValueObject Parse(string value)
+        public static ValueObject Parse(string value)
         {
-            var converter = TypeDescriptor.GetConverter(typeof(GenericValueObject));
+            var converter = TypeDescriptor.GetConverter(typeof(ValueObject));
             if (converter != null)
             {
-                return (GenericValueObject)converter.ConvertFromString(value);
+                return (ValueObject)converter.ConvertFromString(value);
             }
             return default;
         }
 
-        protected static bool NotEqualOperator(GenericValueObject obj, GenericValueObject otherObj)
+        protected static bool NotEqualOperator(ValueObject obj, ValueObject otherObj)
         {
             return !EqualOperator(obj, otherObj);
         }
@@ -40,7 +39,7 @@ namespace Jror.Backend.Libs.Domain.Abstractions.ValueObject
                 return false;
             }
 
-            var other = (GenericValueObject)obj;
+            var other = (ValueObject)obj;
 
             return this.GetEqualityComponents().SequenceEqual(other.GetEqualityComponents());
         }
