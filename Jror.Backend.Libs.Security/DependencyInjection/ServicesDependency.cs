@@ -16,7 +16,7 @@ namespace Jror.Backend.Libs.Security.DependencyInjection
 {
     public static class ServicesDependency
     {
-        public static void AddServiceDependencyJrSecurityApi(this IServiceCollection services)
+        public static void AddServiceDependencyJrorSecurityApi(this IServiceCollection services)
         {
             services.AddAuthentication(x =>
                 {
@@ -59,7 +59,7 @@ namespace Jror.Backend.Libs.Security.DependencyInjection
             });
         }
 
-        public static void AddServiceDependencyJrSecurityApiUsingCustomValidate(this IServiceCollection services, Func<ISecurityConfiguration> configuration)
+        public static void AddServiceDependencyJrorSecurityApiUsingCustomValidate(this IServiceCollection services, Func<ISecurityConfiguration> configuration)
         {
             services.AddScoped<IMongoContextSecurity>((_) =>
             {
@@ -83,7 +83,7 @@ namespace Jror.Backend.Libs.Security.DependencyInjection
 
             services.AddServiceDependencyJrorFrameworkExceptionFilter();
 
-            AddServiceDependencyJrSecurityApi(services);
+            AddServiceDependencyJrorSecurityApi(services);
             services.AddScoped<IValidateToken, ValidateToken>();
         }
     }

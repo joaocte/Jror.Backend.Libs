@@ -12,7 +12,7 @@ namespace Jror.Backend.Libs.Infrastructure.MongoDB.DependencyInjection
 {
     public static class ServicesDependency
     {
-        public static void AddServiceDependencyJrInfrastructureMongoDb(this IServiceCollection services, ConnectionType connectionType = ConnectionType.ReplicaSet)
+        public static void AddServiceDependencyJrorInfrastructureMongoDb(this IServiceCollection services, ConnectionType connectionType = ConnectionType.ReplicaSet)
         {
             var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")?.ToLowerInvariant();
             services.AddScoped<IMongoContext>((_) =>

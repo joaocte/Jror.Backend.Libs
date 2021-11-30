@@ -17,7 +17,7 @@ namespace Jror.Backend.Libs.Api.DependencyInjection
     {
         private static IJrorApiOption _jrApiOption;
 
-        public static void AddServiceDependencyJrApiSwagger(this IServiceCollection services, IConfiguration configuration, Func<IJrorApiOption> options = null)
+        public static void AddServiceDependencyJrorApiSwagger(this IServiceCollection services, IConfiguration configuration, Func<IJrorApiOption> options = null)
         {
             _jrApiOption = options() ?? new JrorApiOption();
 

@@ -9,7 +9,7 @@ namespace Jror.Backend.Libs.Api.DependencyInjection
 {
     public static class UseJrApi
     {
-        public static void UseJrApiSwaggerSecurity(this IApplicationBuilder app, IWebHostEnvironment env, Func<IJrorApiOption> options = null)
+        public static void UseJrorApiSwaggerSecurity(this IApplicationBuilder app, IWebHostEnvironment env, Func<IJrorApiOption> options = null)
         {
             app.UseHttpsRedirection();
 
@@ -24,10 +24,10 @@ namespace Jror.Backend.Libs.Api.DependencyInjection
 
             app.UseAuthorization();
 
-            UseJrApiSwagger(app, env, options);
+            UseJrorApiSwagger(app, env, options);
         }
 
-        public static void UseJrApiSwagger(this IApplicationBuilder app, IWebHostEnvironment env, Func<IJrorApiOption> options = null)
+        public static void UseJrorApiSwagger(this IApplicationBuilder app, IWebHostEnvironment env, Func<IJrorApiOption> options = null)
         {
             var jrApiOption = options() ?? new JrorApiOption();
 
