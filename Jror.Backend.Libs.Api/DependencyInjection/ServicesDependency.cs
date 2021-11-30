@@ -52,7 +52,7 @@ namespace Jror.Backend.Libs.Api.DependencyInjection
                 o.GroupNameFormat = _jrApiOption.GroupNameFormat;
                 o.SubstituteApiVersionInUrl = true;
             });
-            services.AddScoped<IConfigureOptions<SwaggerGenOptions>>(provider => new ConfigureSwaggerOptions(provider.GetService<IApiVersionDescriptionProvider>(), _jrApiOption));
+            services.AddTransient<IConfigureOptions<SwaggerGenOptions>>(provider => new ConfigureSwaggerOptions(provider.GetService<IApiVersionDescriptionProvider>(), _jrApiOption));
             services.Configure<IConfigureOptions<SwaggerGenOptions>>(configuration);
         }
     }
