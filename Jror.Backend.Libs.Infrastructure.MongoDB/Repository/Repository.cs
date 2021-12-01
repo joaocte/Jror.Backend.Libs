@@ -11,13 +11,13 @@ using System.Threading.Tasks;
 
 namespace Jror.Backend.Libs.Infrastructure.MongoDB.Repository
 {
-    public abstract class MongoRepository<T> : IRepository<T> where T : class
+    public abstract class Repository<T> : IRepository<T> where T : class
     {
         protected readonly IMongoContext _context;
         protected IMongoCollection<T> _dbSet;
 
         /// <inheritdoc/>
-        protected MongoRepository(IMongoContext context, string collectionName)
+        protected Repository(IMongoContext context, string collectionName)
         {
             this._context = context;
 

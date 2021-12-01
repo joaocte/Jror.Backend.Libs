@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net5.0</TargetFrameworks>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<Authors>João Roberto</Authors>
+		<Description>Pacote que oferece todas as abstrações de infrastrutura para uso da APIs BackEnd desenvolvida por João Roberto</Description>
+		<PackageDescription>Pacote que oferece todas as abstrações de infrastrutura para uso da APIs BackEnd desenvolvida por João Roberto</PackageDescription>
+		<PackageProjectUrl>https://github.com/joaocte/Jror.Backend.Libs</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/joaocte/Jror.Backend.Libs</RepositoryUrl>
+		<RepositoryType>Public</RepositoryType>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<Version>1.0.5</Version>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	</PropertyGroup>
+
+	
+	
+	<ItemGroup>
+	  <Folder Include="DependencyInjection\" />
+	  <Folder Include="Uow\" />
+	</ItemGroup>
+
+	
+	
+	<ItemGroup>
+	  <PackageReference Include="EntityFramework" Version="6.4.4" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Jror.Backend.Libs.Infrastructure.Data.Shared\Jror.Backend.Libs.Infrastructure.Data.Shared.csproj" />
+	</ItemGroup>
+</Project>
