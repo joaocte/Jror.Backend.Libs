@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Jror.Backend.Libs.Extensions
 {
@@ -7,13 +8,18 @@ namespace Jror.Backend.Libs.Extensions
         public static void AddRange<T>(this ICollection<T> destination,
             IEnumerable<T> source)
         {
+            if (source is null) { return; }
+
+            var enumerable = source.ToList();
+            if (!enumerable.Any()) { return; }
+
             if (destination is List<T> list)
             {
-                list.AddRange(source);
+                list.AddRange(enumerable);
             }
             else
             {
-                foreach (T item in source)
+                foreach (T item in enumerable)
                 {
                     destination.Add(item);
                 }

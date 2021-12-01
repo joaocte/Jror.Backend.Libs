@@ -5,16 +5,6 @@ namespace Jror.Backend.Libs.Extensions
     public static class IntExtensions
     {
         /// <summary>
-        /// Gigabytes
-        /// </summary>
-        /// <param name="value"></param>
-        /// <returns></returns>
-        public static int GB(this int value)
-        {
-            return value.MB() * 1024;
-        }
-
-        /// <summary>
         /// Checks whether a number is even
         /// </summary>
         /// <param name="value"></param>
@@ -61,41 +51,6 @@ namespace Jror.Backend.Libs.Extensions
                 }
             }
             return number != 1;
-        }
-
-        /// <summary>
-        /// Checks whether a number is odd
-        /// </summary>
-        /// <param name="number"></param>
-        /// <returns></returns>
-        /// <summary>
-        /// Kilobytes
-        /// </summary>
-        /// <param name="value"></param>
-        /// <returns></returns>
-        public static int KB(this int value)
-        {
-            return value * 1024;
-        }
-
-        /// <summary>
-        /// Megabytes
-        /// </summary>
-        /// <param name="value"></param>
-        /// <returns></returns>
-        public static int MB(this int value)
-        {
-            return value.KB() * 1024;
-        }
-
-        /// <summary>
-        /// Terabytes
-        /// </summary>
-        /// <param name="value"></param>
-        /// <returns></returns>
-        public static long TB(this int value)
-        {
-            return (long)value.GB() * (long)1024;
         }
 
         /// <summary>
