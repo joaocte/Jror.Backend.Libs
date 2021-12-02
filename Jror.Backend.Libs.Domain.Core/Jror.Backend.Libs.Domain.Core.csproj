@@ -10,10 +10,10 @@
 		<RepositoryUrl>https://github.com/joaocte/Jror.Backend.Libs</RepositoryUrl>
 		<RepositoryType>Public</RepositoryType>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<Version>1.0.5</Version>
+		<Version>1.0.6</Version>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="FluentValidation" Version="10.3.4" />
+		<PackageReference Include="FluentValidation" Version="10.3.5" />
 	</ItemGroup>
 </Project>
