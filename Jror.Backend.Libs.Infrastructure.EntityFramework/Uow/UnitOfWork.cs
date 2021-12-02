@@ -1,5 +1,5 @@
 ﻿using Jror.Backend.Libs.Infrastructure.Data.Shared.Interfaces;
-using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
 namespace Jror.Backend.Libs.Infrastructure.EntityFramework.Uow

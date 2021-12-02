@@ -1,11 +1,11 @@
-﻿using Jror.Backend.Libs.Security.Abstractions;
+﻿using Jror.Backend.Libs.Framework.DependencyInjection;
+using Jror.Backend.Libs.Security.Abstractions;
 using Jror.Backend.Libs.Security.Abstractions.Application;
 using Jror.Backend.Libs.Security.Abstractions.Entity;
 using Jror.Backend.Libs.Security.Abstractions.Infrastructure.Interfaces;
 using Jror.Backend.Libs.Security.Application;
 using Jror.Backend.Libs.Security.Context;
 using Jror.Backend.Libs.Security.Infrastructure.Repository.MongoDb;
-using Jror.Backend.Libs.Framework.DependencyInjection;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

@@ -1,4 +1,4 @@
-﻿using System.Data.Entity;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace Jror.Backend.Libs.Infrastructure.EntityFramework.Tests.TestObjects
 {

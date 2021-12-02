@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
 using FluentValidation.Results;
-using System.Linq;
 using Jror.Backend.Libs.Domain.Core.Validations;
+using System.Linq;
 using Xunit;
 
 namespace Jror.Backend.Libs.Domain.Tests.Core.Validations

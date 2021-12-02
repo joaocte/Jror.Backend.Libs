@@ -1,17 +1,19 @@
 ﻿using Jror.Backend.Libs.Infrastructure.Data.Shared.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading;
 using System.Threading.Tasks;
 
+using DbContext = Microsoft.EntityFrameworkCore;
+
 namespace Jror.Backend.Libs.Infrastructure.EntityFramework.Repository
 {
     public abstract class Repository<TEntity, TContext> : IRepository<TEntity>
         where TEntity : class
-        where TContext : DbContext
+        where TContext : DbContext.DbContext
     {
         private readonly TContext context;
 
@@ -26,7 +28,7 @@ namespace Jror.Backend.Libs.Infrastructure.EntityFramework.Repository
 
         public async Task AddAsync(TEntity obj, CancellationToken cancellationToken = default)
         {
-            await Task.Run(() => DbSet.Add(obj));
+            await Task.Run(() => DbSet.Add(obj), cancellationToken);
         }
 
         public async Task<TEntity> GetByIdAsync(object id, CancellationToken cancellationToken = default)
@@ -41,25 +43,25 @@ namespace Jror.Backend.Libs.Infrastructure.EntityFramework.Repository
 
         public async Task<bool> ExistsAsync(Expression<Func<TEntity, bool>> condition, CancellationToken cancellationToken = default)
         {
-            return await Task.Run(() => DbSet.Where(condition).Any());
+            return await Task.Run(() => DbSet.Where(condition).Any(), cancellationToken);
         }
 
         public async Task<IEnumerable<TEntity>> GetAllAsync(CancellationToken cancellationToken = default)
         {
-            return await DbSet.ToListAsync();
+            return await DbSet.ToListAsync(cancellationToken);
         }
 
         public async Task UpdateAsync(TEntity obj, CancellationToken cancellationToken = default)
         {
-            var taskAttach = Task.Run(() => DbSet.Attach(obj));
-            var taskContext = Task.Run(() => context.Entry(obj).State = EntityState.Modified);
+            var taskAttach = Task.Run(() => DbSet.Attach(obj), cancellationToken);
+            var taskContext = Task.Run(() => context.Entry(obj).State = EntityState.Modified, cancellationToken);
 
             await Task.WhenAll(taskAttach, taskContext);
         }
 
         public async Task RemoveAsync(object id, CancellationToken cancellationToken = default)
         {
-            var entity = await DbSet.FindAsync(id);
+            var entity = await DbSet.FindAsync(id, cancellationToken);
             if (entity == null)
             {
                 return;
@@ -73,14 +75,14 @@ namespace Jror.Backend.Libs.Infrastructure.EntityFramework.Repository
 
         public async Task<bool> ExistsAsync(object id, CancellationToken cancellationToken = default)
         {
-            var entity = await DbSet.FindAsync(id);
+            var entity = await DbSet.FindAsync(id, cancellationToken);
 
             return entity != null;
         }
 
         public async Task<IQueryable<TEntity>> GetAllAsQueryableAsync(CancellationToken cancellationToken = default)
         {
-            return await Task.Run(() => DbSet);
+            return await Task.Run(() => DbSet, cancellationToken);
         }
 
         protected virtual void Dispose(bool disposing)
