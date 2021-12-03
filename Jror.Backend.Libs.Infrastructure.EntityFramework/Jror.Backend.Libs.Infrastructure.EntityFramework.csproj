@@ -10,7 +10,7 @@
 		<RepositoryUrl>https://github.com/joaocte/Jror.Backend.Libs</RepositoryUrl>
 		<RepositoryType>Public</RepositoryType>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<Version>1.0.7</Version>
+		<Version>1.0.8</Version>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	</PropertyGroup>
 
@@ -26,9 +26,19 @@
 	<ItemGroup>
 	  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.12" />
 	  <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.12">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.12">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\Jror.Backend.Libs.Domain.Abstractions\Jror.Backend.Libs.Domain.Abstractions.csproj" />
+	  <ProjectReference Include="..\Jror.Backend.Libs.Framework\Jror.Backend.Libs.Framework.csproj" />
 	  <ProjectReference Include="..\Jror.Backend.Libs.Infrastructure.Data.Shared\Jror.Backend.Libs.Infrastructure.Data.Shared.csproj" />
 	</ItemGroup>
 </Project>

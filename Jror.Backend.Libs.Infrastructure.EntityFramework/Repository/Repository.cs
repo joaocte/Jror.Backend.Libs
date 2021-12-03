@@ -1,4 +1,5 @@
-﻿using Jror.Backend.Libs.Infrastructure.Data.Shared.Interfaces;
+﻿using Jror.Backend.Libs.Domain.Abstractions.Exceptions;
+using Jror.Backend.Libs.Infrastructure.Data.Shared.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -33,12 +34,12 @@ namespace Jror.Backend.Libs.Infrastructure.EntityFramework.Repository
 
         public async Task<TEntity> GetByIdAsync(object id, CancellationToken cancellationToken = default)
         {
-            return await DbSet.FindAsync(id, cancellationToken);
+            return await DbSet.FindAsync(id);
         }
 
         public async Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> condition, CancellationToken cancellationToken = default)
         {
-            return await DbSet.FindAsync(condition, cancellationToken);
+            return await DbSet.FindAsync(condition);
         }
 
         public async Task<bool> ExistsAsync(Expression<Func<TEntity, bool>> condition, CancellationToken cancellationToken = default)
@@ -48,7 +49,7 @@ namespace Jror.Backend.Libs.Infrastructure.EntityFramework.Repository
 
         public async Task<IEnumerable<TEntity>> GetAllAsync(CancellationToken cancellationToken = default)
         {
-            return await DbSet.ToListAsync(cancellationToken);
+            return await DbSet.ToListAsync(cancellationToken: cancellationToken);
         }
 
         public async Task UpdateAsync(TEntity obj, CancellationToken cancellationToken = default)
@@ -61,10 +62,10 @@ namespace Jror.Backend.Libs.Infrastructure.EntityFramework.Repository
 
         public async Task RemoveAsync(object id, CancellationToken cancellationToken = default)
         {
-            var entity = await DbSet.FindAsync(id, cancellationToken);
+            var entity = await DbSet.FindAsync(id);
             if (entity == null)
             {
-                return;
+                throw new NotFoundException($"Não foi encontrado o id: {id}");
             }
             if (context.Entry(entity).State == EntityState.Detached)
             {
@@ -75,7 +76,7 @@ namespace Jror.Backend.Libs.Infrastructure.EntityFramework.Repository
 
         public async Task<bool> ExistsAsync(object id, CancellationToken cancellationToken = default)
         {
-            var entity = await DbSet.FindAsync(id, cancellationToken);
+            var entity = await DbSet.FindAsync(id);
 
             return entity != null;
         }
