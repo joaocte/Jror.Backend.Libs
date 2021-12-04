@@ -2,7 +2,6 @@ using Jror.Backend.Libs.Infrastructure.Data.Shared.Interfaces;
 using Jror.Backend.Libs.Infrastructure.EntityFramework.Tests.TestObjects;
 using Microsoft.EntityFrameworkCore;
 using NSubstitute;
-using System.Threading;
 using Xunit;
 
 namespace Jror.Backend.Libs.Infrastructure.EntityFramework.Tests
@@ -69,7 +68,7 @@ namespace Jror.Backend.Libs.Infrastructure.EntityFramework.Tests
 
             // Assert
             context.Received().Set<TestClass>();
-            dbSetMock.Received().FindAsync(1, Arg.Any<CancellationToken>());
+            dbSetMock.Received().FindAsync(1);
         }
 
         [Fact]
@@ -86,7 +85,7 @@ namespace Jror.Backend.Libs.Infrastructure.EntityFramework.Tests
 
             // Assert
             context.Received().Set<TestClass>();
-            dbSetMock.Received().FindAsync(Arg.Any<object>(), Arg.Any<CancellationToken>());
+            dbSetMock.Received().FindAsync(Arg.Any<object>());
         }
 
         [Fact]
@@ -109,14 +108,14 @@ namespace Jror.Backend.Libs.Infrastructure.EntityFramework.Tests
             context.Set<TestClass>().Returns(dbSetMock);
             repository = new TesteRepository<TestClassContext>(context);
 
-            dbSetMock.FindAsync(Arg.Any<object>(), Arg.Any<CancellationToken>()).Returns(testObject);
+            dbSetMock.FindAsync(Arg.Any<object>()).Returns(testObject);
 
             // Act
             var retorno = repository.ExistsAsync(testObject.Id).Result;
 
             //Assert
             context.Received().Set<TestClass>();
-            dbSetMock.Received().FindAsync(Arg.Any<object>(), Arg.Any<CancellationToken>());
+            dbSetMock.Received().FindAsync(Arg.Any<object>());
 
             Assert.True(retorno);
         }

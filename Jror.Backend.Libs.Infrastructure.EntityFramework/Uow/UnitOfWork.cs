@@ -4,12 +4,13 @@ using System.Threading.Tasks;
 
 namespace Jror.Backend.Libs.Infrastructure.EntityFramework.Uow
 {
-    public class UnitOfWork : IUnitOfWork
+    public class UnitOfWork<TContext> : IUnitOfWork
+        where TContext : DbContext
     {
         private bool disposedValue;
-        private readonly DbContext context;
+        private readonly TContext context;
 
-        public UnitOfWork(DbContext context)
+        public UnitOfWork(TContext context)
         {
             this.context = context;
         }
