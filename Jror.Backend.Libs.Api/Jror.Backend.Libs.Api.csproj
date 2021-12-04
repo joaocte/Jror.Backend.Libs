@@ -11,7 +11,7 @@
 		<RepositoryType>Public</RepositoryType>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<OpenApiGenerateDocuments>false</OpenApiGenerateDocuments>
-		<Version>1.0.9</Version>
+		<Version>1.1.0</Version>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	</PropertyGroup>
 	<ItemGroup>

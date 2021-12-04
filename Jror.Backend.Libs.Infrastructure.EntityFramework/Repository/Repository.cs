@@ -29,7 +29,11 @@ namespace Jror.Backend.Libs.Infrastructure.EntityFramework.Repository
 
         public async Task AddAsync(TEntity obj, CancellationToken cancellationToken = default)
         {
-            await Task.Run(() => DbSet.Add(obj), cancellationToken);
+            var taskAdd = Task.Run(() => DbSet.Add(obj), cancellationToken);
+
+            var taskCommit = context.SaveChangesAsync(cancellationToken);
+
+            await Task.WhenAll(taskAdd, taskCommit);
         }
 
         public async Task<TEntity> GetByIdAsync(object id, CancellationToken cancellationToken = default)
@@ -56,8 +60,8 @@ namespace Jror.Backend.Libs.Infrastructure.EntityFramework.Repository
         {
             var taskAttach = Task.Run(() => DbSet.Attach(obj), cancellationToken);
             var taskContext = Task.Run(() => context.Entry(obj).State = EntityState.Modified, cancellationToken);
-
-            await Task.WhenAll(taskAttach, taskContext);
+            var taskCommit = context.SaveChangesAsync(cancellationToken);
+            await Task.WhenAll(taskAttach, taskContext, taskCommit);
         }
 
         public async Task RemoveAsync(object id, CancellationToken cancellationToken = default)
@@ -72,6 +76,8 @@ namespace Jror.Backend.Libs.Infrastructure.EntityFramework.Repository
                 DbSet.Attach(entity);
             }
             DbSet.Remove(entity);
+
+            await context.SaveChangesAsync(cancellationToken);
         }
 
         public async Task<bool> ExistsAsync(object id, CancellationToken cancellationToken = default)
