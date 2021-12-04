@@ -29,11 +29,9 @@ namespace Jror.Backend.Libs.Infrastructure.EntityFramework.Repository
 
         public async Task AddAsync(TEntity obj, CancellationToken cancellationToken = default)
         {
-            var taskAdd = Task.Run(() => DbSet.Add(obj), cancellationToken);
+            DbSet.Add(obj);
 
-            var taskCommit = context.SaveChangesAsync(cancellationToken);
-
-            await Task.WhenAll(taskAdd, taskCommit);
+            await context.SaveChangesAsync(cancellationToken);
         }
 
         public async Task<TEntity> GetByIdAsync(object id, CancellationToken cancellationToken = default)
@@ -48,7 +46,7 @@ namespace Jror.Backend.Libs.Infrastructure.EntityFramework.Repository
 
         public async Task<bool> ExistsAsync(Expression<Func<TEntity, bool>> condition, CancellationToken cancellationToken = default)
         {
-            return await Task.Run(() => DbSet.Where(condition).Any(), cancellationToken);
+            return await Task.Run(() => DbSet.Where(condition).Any());
         }
 
         public async Task<IEnumerable<TEntity>> GetAllAsync(CancellationToken cancellationToken = default)
@@ -58,10 +56,9 @@ namespace Jror.Backend.Libs.Infrastructure.EntityFramework.Repository
 
         public async Task UpdateAsync(TEntity obj, CancellationToken cancellationToken = default)
         {
-            var taskAttach = Task.Run(() => DbSet.Attach(obj), cancellationToken);
-            var taskContext = Task.Run(() => context.Entry(obj).State = EntityState.Modified, cancellationToken);
-            var taskCommit = context.SaveChangesAsync(cancellationToken);
-            await Task.WhenAll(taskAttach, taskContext, taskCommit);
+            DbSet.Attach(obj);
+            context.Entry(obj).State = EntityState.Modified;
+            await context.SaveChangesAsync(cancellationToken);
         }
 
         public async Task RemoveAsync(object id, CancellationToken cancellationToken = default)
