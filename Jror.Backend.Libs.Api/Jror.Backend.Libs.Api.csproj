@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net5.0</TargetFrameworks>
+		<TargetFrameworks>net5.0;net6.0</TargetFrameworks>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
 		<Authors>João Roberto</Authors>
 		<Description>Pacote que oferece todas as abstrações para uso da APIs BackEnd desenvolvida por João Roberto</Description>
@@ -11,7 +11,7 @@
 		<RepositoryType>Public</RepositoryType>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<OpenApiGenerateDocuments>false</OpenApiGenerateDocuments>
-		<Version>1.1.1</Version>
+		<Version>1.1.2</Version>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	</PropertyGroup>
 	<ItemGroup>
