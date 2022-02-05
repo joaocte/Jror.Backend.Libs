@@ -7,7 +7,7 @@ namespace Jror.Backend.Libs.Messaging.Abstractions.Tests
     public class MessageFormatterBaseTest
     {
         [Fact]
-        public void Quando_Criar_Messagem_E_Formatar_Entao_Return_Json_Da_Mensagem()
+        public  void Quando_Criar_Messagem_E_Formatar_Entao_Return_Json_Da_Mensagem()
         {
             var message = new MessageFake
             {
@@ -23,7 +23,7 @@ namespace Jror.Backend.Libs.Messaging.Abstractions.Tests
         }
 
         [Fact]
-        public void Quando_Criar_Uma_Mensagem_Null_Entao_Throw_ArgumentNullException()
+        public  void Quando_Criar_Uma_Mensagem_Null_Entao_Throw_ArgumentNullException()
         {
             var message = new MessageFake();
             message = null;

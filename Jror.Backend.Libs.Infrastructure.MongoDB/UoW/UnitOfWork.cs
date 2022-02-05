@@ -40,6 +40,6 @@ namespace Jror.Backend.Libs.Infrastructure.MongoDB.UoW
         }
 
         /// <inheritdoc/>
-        public void Dispose() => Dispose(disposing: true);
+        public virtual void Dispose() => Dispose(disposing: true);
     }
 }

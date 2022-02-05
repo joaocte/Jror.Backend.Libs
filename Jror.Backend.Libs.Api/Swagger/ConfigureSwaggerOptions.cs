@@ -23,7 +23,7 @@ namespace Jror.Backend.Libs.Api.Swagger
         }
 
         /// <inheritdoc/>
-        public void Configure(SwaggerGenOptions options)
+        public  void Configure(SwaggerGenOptions options)
         {
             foreach (var description in provider.ApiVersionDescriptions)
             {

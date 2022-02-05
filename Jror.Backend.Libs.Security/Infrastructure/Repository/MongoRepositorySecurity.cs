@@ -23,7 +23,7 @@ namespace Jror.Backend.Libs.Security.Infrastructure.Repository
         }
 
         /// <inheritdoc/>
-        public virtual async Task<TEntity> GetByIdAsync(object id, CancellationToken cancellationToken = default)
+        public  async Task<TEntity> GetByIdAsync(object id, CancellationToken cancellationToken = default)
         {
             var data = await DbSet
                 .FindAsync(Builders<TEntity>.Filter.Eq("_id", id.ToString()), null, cancellationToken)
@@ -32,18 +32,18 @@ namespace Jror.Backend.Libs.Security.Infrastructure.Repository
             return await data.SingleOrDefaultAsync(cancellationToken);
         }
 
-        public virtual async Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> condition, CancellationToken cancellationToken = default)
+        public  async Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> condition, CancellationToken cancellationToken = default)
         {
             return await Task.Run(() => DbSet.AsQueryable().Where(condition).FirstOrDefault(), cancellationToken);
         }
 
-        public virtual async Task<bool> ExistsAsync(Expression<Func<TEntity, bool>> condition, CancellationToken cancellationToken = default)
+        public  async Task<bool> ExistsAsync(Expression<Func<TEntity, bool>> condition, CancellationToken cancellationToken = default)
         {
             return await Task.Run(() => DbSet.AsQueryable().Any(condition), cancellationToken);
         }
 
         /// <inheritdoc/>
-        public virtual async Task<IEnumerable<TEntity>> GetAllAsync(CancellationToken cancellationToken = default)
+        public  async Task<IEnumerable<TEntity>> GetAllAsync(CancellationToken cancellationToken = default)
         {
             var all = await DbSet.
                 FindAsync(Builders<TEntity>.Filter.Empty, null, cancellationToken)
@@ -52,7 +52,7 @@ namespace Jror.Backend.Libs.Security.Infrastructure.Repository
         }
 
         /// <inheritdoc/>
-        protected virtual void Dispose(bool disposing)
+        protected  void Dispose(bool disposing)
         {
             if (disposing)
             {
@@ -63,7 +63,7 @@ namespace Jror.Backend.Libs.Security.Infrastructure.Repository
         }
 
         /// <inheritdoc/>
-        public void Dispose() => Dispose(true);
+        public  void Dispose() => Dispose(true);
 
         public async Task<bool> ExistsAsync(object id, CancellationToken cancellationToken = default)
         {

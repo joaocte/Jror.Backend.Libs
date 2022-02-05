@@ -11,7 +11,7 @@ namespace Jror.Backend.Libs.Infrastructure.EntityFramework.Tests.TestObjects
 
         public DbSet<TestClass> DbSetTestClass { get; set; }
 
-        public void SetModified(object entity)
+        public virtual void SetModified(object entity)
         {
             Entry(entity).State = EntityState.Modified;
         }

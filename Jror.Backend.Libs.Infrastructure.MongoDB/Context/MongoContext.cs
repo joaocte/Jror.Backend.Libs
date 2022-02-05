@@ -83,7 +83,7 @@ namespace Jror.Backend.Libs.Infrastructure.MongoDB.Context
         }
 
         /// <inheritdoc/>
-        public void Dispose()
+        public virtual void Dispose()
         {
             Session?.Dispose();
             GC.SuppressFinalize(this);

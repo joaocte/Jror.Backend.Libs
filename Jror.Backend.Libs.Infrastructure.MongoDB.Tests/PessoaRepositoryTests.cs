@@ -13,7 +13,7 @@ namespace Jr.Backend.Libs.Tests.Infrastructure
     public class PessoaRepositoryTests : InfrastructureTestBase
     {
         [Fact]
-        public void Quando_Receber_Um_Objeto_Valido_Entao_Adicionar_Este_Objeto()
+        public virtual void Quando_Receber_Um_Objeto_Valido_Entao_Adicionar_Este_Objeto()
         {
             var mockContext = Substitute.For<IMongoContext>();
             var mockCollection = CreateMockCollection<Pessoa>();
@@ -31,7 +31,7 @@ namespace Jr.Backend.Libs.Tests.Infrastructure
         }
 
         [Fact]
-        public void Quando_Receber_Um_Id_Valido_Retornar_Objeto_Encontrado()
+        public virtual void Quando_Receber_Um_Id_Valido_Retornar_Objeto_Encontrado()
         {
             var mockContext = Substitute.For<IMongoContext>();
             var mockCollection = CreateMockCollection<Pessoa>();
@@ -58,7 +58,7 @@ namespace Jr.Backend.Libs.Tests.Infrastructure
         }
 
         [Fact]
-        public void Quanto_Consultar_Todos_Objetos_Entao_Retornar_Objeto_Encontrado()
+        public virtual void Quanto_Consultar_Todos_Objetos_Entao_Retornar_Objeto_Encontrado()
         {
             var mockContext = Substitute.For<IMongoContext>();
             var mockCollection = CreateMockCollection<Pessoa>();
@@ -93,7 +93,7 @@ namespace Jr.Backend.Libs.Tests.Infrastructure
         }
 
         [Fact]
-        public void Quando_Receber_Objeto_Valido_Para_Atualizar_Entao_Atualizar_Objeto()
+        public virtual void Quando_Receber_Objeto_Valido_Para_Atualizar_Entao_Atualizar_Objeto()
         {
             var mockContext = Substitute.For<IMongoContext>();
             var mockCollection = CreateMockCollection<Pessoa>();
@@ -114,7 +114,7 @@ namespace Jr.Backend.Libs.Tests.Infrastructure
         }
 
         [Fact]
-        public void Quando_Receber_Objeto_Valido_Entao_Remover()
+        public virtual void Quando_Receber_Objeto_Valido_Entao_Remover()
         {
             var mockContext = Substitute.For<IMongoContext>();
             var mockCollection = CreateMockCollection<Pessoa>();
@@ -133,7 +133,7 @@ namespace Jr.Backend.Libs.Tests.Infrastructure
         }
 
         [Fact]
-        public void Quando_Terminar_Operacao_Deve_Realizar_Dispose()
+        public virtual void Quando_Terminar_Operacao_Deve_Realizar_Dispose()
         {
             var mockContext = Substitute.For<IMongoContext>();
             var mockCollection = CreateMockCollection<Pessoa>();

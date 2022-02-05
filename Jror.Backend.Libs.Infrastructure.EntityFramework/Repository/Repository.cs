@@ -27,41 +27,41 @@ namespace Jror.Backend.Libs.Infrastructure.EntityFramework.Repository
             DbSet = context.Set<TEntity>();
         }
 
-        public async Task AddAsync(TEntity obj, CancellationToken cancellationToken = default)
+        public virtual async Task AddAsync(TEntity obj, CancellationToken cancellationToken = default)
         {
             DbSet.Add(obj);
 
             await context.SaveChangesAsync(cancellationToken);
         }
 
-        public async Task<TEntity> GetByIdAsync(object id, CancellationToken cancellationToken = default)
+        public virtual async Task<TEntity> GetByIdAsync(object id, CancellationToken cancellationToken = default)
         {
             return await DbSet.FindAsync(id);
         }
 
-        public async Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> condition, CancellationToken cancellationToken = default)
+        public virtual async Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> condition, CancellationToken cancellationToken = default)
         {
             return await DbSet.FindAsync(condition);
         }
 
-        public async Task<bool> ExistsAsync(Expression<Func<TEntity, bool>> condition, CancellationToken cancellationToken = default)
+        public virtual async Task<bool> ExistsAsync(Expression<Func<TEntity, bool>> condition, CancellationToken cancellationToken = default)
         {
             return await Task.Run(() => DbSet.Where(condition).Any());
         }
 
-        public async Task<IEnumerable<TEntity>> GetAllAsync(CancellationToken cancellationToken = default)
+        public virtual async Task<IEnumerable<TEntity>> GetAllAsync(CancellationToken cancellationToken = default)
         {
             return await DbSet.ToListAsync(cancellationToken: cancellationToken);
         }
 
-        public async Task UpdateAsync(TEntity obj, CancellationToken cancellationToken = default)
+        public virtual async Task UpdateAsync(TEntity obj, CancellationToken cancellationToken = default)
         {
             DbSet.Attach(obj);
             context.Entry(obj).State = EntityState.Modified;
             await context.SaveChangesAsync(cancellationToken);
         }
 
-        public async Task RemoveAsync(object id, CancellationToken cancellationToken = default)
+        public virtual async Task RemoveAsync(object id, CancellationToken cancellationToken = default)
         {
             var entity = await DbSet.FindAsync(id);
             if (entity == null)
@@ -77,14 +77,14 @@ namespace Jror.Backend.Libs.Infrastructure.EntityFramework.Repository
             await context.SaveChangesAsync(cancellationToken);
         }
 
-        public async Task<bool> ExistsAsync(object id, CancellationToken cancellationToken = default)
+        public virtual  async Task<bool> ExistsAsync(object id, CancellationToken cancellationToken = default)
         {
             var entity = await DbSet.FindAsync(id);
 
             return entity != null;
         }
 
-        public async Task<IQueryable<TEntity>> GetAllAsQueryableAsync(CancellationToken cancellationToken = default)
+        public virtual async Task<IQueryable<TEntity>> GetAllAsQueryableAsync(CancellationToken cancellationToken = default)
         {
             return await Task.Run(() => DbSet, cancellationToken);
         }
@@ -102,7 +102,7 @@ namespace Jror.Backend.Libs.Infrastructure.EntityFramework.Repository
             }
         }
 
-        public void Dispose()
+        public virtual void Dispose()
         {
             Dispose(disposing: true);
         }

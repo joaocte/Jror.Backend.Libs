@@ -38,7 +38,7 @@ namespace Jror.Backend.Libs.Infrastructure.EntityFramework.Tests
         }
 
         //[Fact]
-        //public void RemoveAsync_TestClassObjectPassed_ProperMethodCalled()
+        //public  void RemoveAsync_TestClassObjectPassed_ProperMethodCalled()
         //{
         //    // Arrange
         //    context.Set<TestClass>().Returns(dbSetMock);
@@ -121,7 +121,7 @@ namespace Jror.Backend.Libs.Infrastructure.EntityFramework.Tests
         }
 
         //[Fact]
-        //public void UpdateAsync_TestClassObjectPassed_ProperMethodCalled()
+        //public  void UpdateAsync_TestClassObjectPassed_ProperMethodCalled()
         //{
         //    context.Set<TestClass>().Returns(dbSetMock);
         //    repository = new TesteRepository<TestClassContext>(context);

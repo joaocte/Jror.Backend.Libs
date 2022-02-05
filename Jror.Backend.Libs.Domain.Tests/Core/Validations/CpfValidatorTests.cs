@@ -14,7 +14,7 @@ namespace Jror.Backend.Libs.Domain.Tests.Core.Validations
         [InlineData("94509906030")]
         [InlineData("51392442095")]
         [InlineData("331.738.730-09")]
-        public void Quando_CPF_Eh_Valido_Entao_O_Validador_Deve_Passar(string cpf)
+        public  void Quando_CPF_Eh_Valido_Entao_O_Validador_Deve_Passar(string cpf)
         {
             TestExtensionsValidator<Pessoa> validator = new(x => x.RuleFor(r => r.Cpf).CpfValido());
             ValidationResult result = validator.Validate(new Pessoa { Cpf = cpf });
@@ -23,7 +23,7 @@ namespace Jror.Backend.Libs.Domain.Tests.Core.Validations
         }
 
         [Fact]
-        public void Quando_CPF_Eh_Invalido_Com_Mensagem_Customizada_Entao_O_Validador_Deve_Falhar()
+        public  void Quando_CPF_Eh_Invalido_Com_Mensagem_Customizada_Entao_O_Validador_Deve_Falhar()
         {
             const string customMessage = "Custom Message";
 
@@ -41,7 +41,7 @@ namespace Jror.Backend.Libs.Domain.Tests.Core.Validations
         [InlineData("543.434.321-76")]
         [InlineData("A822.420.106-62")]
         [InlineData("822.420.106-62a")]
-        public void Quando_O_CPF_Eh_Invalido_O_Validador_Deve_Falhar(string cpf)
+        public  void Quando_O_CPF_Eh_Invalido_O_Validador_Deve_Falhar(string cpf)
         {
             TestExtensionsValidator<Pessoa> validator = new(x => x.RuleFor(r => r.Cpf).CpfValido());
             ValidationResult result = validator.Validate(new Pessoa { Cpf = cpf });

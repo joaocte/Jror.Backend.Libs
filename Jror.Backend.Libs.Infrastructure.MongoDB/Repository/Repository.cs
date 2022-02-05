@@ -83,7 +83,7 @@ namespace Jror.Backend.Libs.Infrastructure.MongoDB.Repository
         }
 
         /// <inheritdoc/>
-        public void Dispose() => Dispose(true);
+        public virtual void Dispose() => Dispose(true);
 
         public async Task<bool> ExistsAsync(object id, CancellationToken cancellationToken = default)
         {

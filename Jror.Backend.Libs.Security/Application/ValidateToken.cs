@@ -49,7 +49,7 @@ namespace Jror.Backend.Libs.Security.Application
             }
         }
 
-        public void Dispose()
+        public virtual void Dispose()
         {
             Dispose(true);
         }

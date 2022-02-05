@@ -8,7 +8,7 @@ namespace Jror.Backend.Libs.Api.Swagger
 {
     public class SwaggerVersioningOperationFilter : IOperationFilter
     {
-        public void Apply(OpenApiOperation operation, OperationFilterContext context)
+        public  void Apply(OpenApiOperation operation, OperationFilterContext context)
         {
             var apiDescription = context.ApiDescription;
 

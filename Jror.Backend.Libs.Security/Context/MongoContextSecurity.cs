@@ -38,7 +38,7 @@ namespace Jror.Backend.Libs.Security.Context
         }
 
         /// <inheritdoc/>
-        public void Dispose()
+        public virtual void Dispose()
         {
         }
     }
