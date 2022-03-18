@@ -19,7 +19,8 @@ namespace Jror.Backend.Libs.Security.Application
 
         public async Task<bool> ExecuteAsync(string token)
         {
-            var validToken = token.Replace("bearer", "").TrimStart();
+            var validToken = token.Replace("bearer ", string.Empty
+                , StringComparison.CurrentCultureIgnoreCase).TrimStart();
             var handler = new JwtSecurityTokenHandler();
             var jwtSecurityToken = handler.ReadJwtToken(validToken);
             var clientId = jwtSecurityToken.Claims.FirstOrDefault(x => x.Type == "ClientId")?.Value;
@@ -31,7 +32,7 @@ namespace Jror.Backend.Libs.Security.Application
             var clientSecretGuid = string.IsNullOrWhiteSpace(clientSecret) ? Guid.Empty : new Guid(clientSecret);
 
             var tenant = await tenantRepository.GetAsync(x =>
-                x.ClientId == clientIdGuid && x.ClientSecret == clientSecretGuid);
+                x.ClientId == clientIdGuid && x.ClientSecret == clientSecretGuid && x.Status == "Ativo");
 
             if (tenant == null)
                 throw new UnauthorizedAccessException("Token Informado é Iválido");

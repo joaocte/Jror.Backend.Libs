@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31911.196
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{DF7F159A-9E1F-40DD-9C69-C9670CEBCFC2}"
 EndProject
@@ -55,7 +55,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jror.Backend.Libs.Extension
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jror.Backend.Libs.Infrastructure.EntityFramework", "Jror.Backend.Libs.Infrastructure.EntityFramework\Jror.Backend.Libs.Infrastructure.EntityFramework.csproj", "{1088A5D3-42FB-47C7-9D10-8F6F7ECADD0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jror.Backend.Libs.Infrastructure.EntityFramework.Tests", "Jror.Backend.Libs.Infrastructure.EntityFramework.Tests\Jror.Backend.Libs.Infrastructure.EntityFramework.Tests.csproj", "{2D4D1EE8-BB97-4C4B-9024-5310442F6EEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jror.Backend.Libs.Infrastructure.EntityFramework.Tests", "Jror.Backend.Libs.Infrastructure.EntityFramework.Tests\Jror.Backend.Libs.Infrastructure.EntityFramework.Tests.csproj", "{2D4D1EE8-BB97-4C4B-9024-5310442F6EEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jror.Backend.Libs.Security.Tests", "Jror.Backend.Libs.Security.Tests\Jror.Backend.Libs.Security.Tests.csproj", "{9178A974-BE85-4EBB-BC51-44A120ACF985}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -143,6 +145,10 @@ Global
 		{2D4D1EE8-BB97-4C4B-9024-5310442F6EEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D4D1EE8-BB97-4C4B-9024-5310442F6EEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D4D1EE8-BB97-4C4B-9024-5310442F6EEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9178A974-BE85-4EBB-BC51-44A120ACF985}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9178A974-BE85-4EBB-BC51-44A120ACF985}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9178A974-BE85-4EBB-BC51-44A120ACF985}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9178A974-BE85-4EBB-BC51-44A120ACF985}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -168,6 +174,7 @@ Global
 		{400B3B1B-7911-4E3A-9535-0C211B6A32A9} = {A48B6887-673D-4A04-8802-50CCE9B46626}
 		{1088A5D3-42FB-47C7-9D10-8F6F7ECADD0D} = {E11534E5-820B-4144-A533-15B0810AA851}
 		{2D4D1EE8-BB97-4C4B-9024-5310442F6EEB} = {E11534E5-820B-4144-A533-15B0810AA851}
+		{9178A974-BE85-4EBB-BC51-44A120ACF985} = {A8E6E1EA-C477-40D0-BE4B-C04FEC8D1B9E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8FA74BA9-7ADA-49CE-9823-DCEEA8E546E1}

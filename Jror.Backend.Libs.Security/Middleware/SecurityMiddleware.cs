@@ -19,7 +19,7 @@ namespace Jror.Backend.Libs.Security.Middleware
         {
             using IValidateToken validateToken = context.RequestServices.GetService<IValidateToken>();
 
-            string token = context.Request.Headers["Authorization"];
+            string token = context.Request.Headers["Authorization"].ToString().Replace("bearer ", string.Empty, System.StringComparison.InvariantCultureIgnoreCase);
 
             if (token == null || validateToken == null || !await validateToken.ExecuteAsync(token))
                 throw new UnauthorizedException("Access denied!");
