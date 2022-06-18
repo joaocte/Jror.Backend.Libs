@@ -10,10 +10,10 @@
 		<RepositoryUrl>https://github.com/joaocte/Jror.Backend.Libs</RepositoryUrl>
 		<RepositoryType>Public</RepositoryType>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<Version>1.1.5</Version>
+		<Version>1.1.6-beta</Version>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="MongoDB.Driver" Version="2.15.0" />
+		<PackageReference Include="MongoDB.Driver" Version="2.16.0" />
 	</ItemGroup>
 </Project>

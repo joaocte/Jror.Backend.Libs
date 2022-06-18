@@ -10,8 +10,8 @@ namespace Jror.Backend.Libs.Security.Tests
     public class ValidateTokenTests
     {
         private readonly ITenantRepositorySecurity tenantRepository;
-        private Guid clientIdGuid = new Guid("7756ab70-0311-403b-a31d-c5dbbbf3e9cc");
-        private Guid clientSecretGuid = new Guid("61d22235-27ad-4382-9680-c5e94273496f");
+        private Guid clientIdGuid = new Guid("58402e4a-58fe-480d-91a8-20582b375447");
+        private Guid clientSecretGuid = new Guid("3881777e-bcc8-4735-a9ed-6b716c59de5c");
         private readonly IValidateToken validateToken;
         public ValidateTokenTests()
         {
@@ -30,8 +30,7 @@ namespace Jror.Backend.Libs.Security.Tests
         [Fact]          
         public void QuandoTokenEhValidoReturnTrue()
         {
-            var token = "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJDbGllbnRJZCI6Ijc3NTZhYjcwLTAzMTEtNDAzYi1hMzFkLWM1ZGJiYmYzZTljYyIsIkNsaWVudFNlY3JldCI6IjYxZDIyMjM1LTI3YWQtNDM4Mi05NjgwLWM1ZTk0MjczNDk2ZiIsIlRlbmFudE5hbWUiOiJBcGlQZXNzb2EiLCJUZW5hbnRLZXkiOiJBcGlQZXNzb2EiLCJuYmYiOjE2NDc2MDA2MTUsImV4cCI6MTY0NzYwNzgxNSwiaWF0IjoxNjQ3NjAwNjE1fQ.d2jZfnkSGlXcEDkxatqhPidU2P9IlIRO0UoyUztePQdnpHL3RZ_LhIaJstR80-_YWAxwStWxW2S2rbjCQbSc2Q";
-
+            var token = "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJDbGllbnRJZCI6IjU4NDAyZTRhLTU4ZmUtNDgwZC05MWE4LTIwNTgyYjM3NTQ0NyIsIkNsaWVudFNlY3JldCI6IjM4ODE3NzdlLWJjYzgtNDczNS1hOWVkLTZiNzE2YzU5ZGU1YyIsIlRlbmFudE5hbWUiOiJBcGlQZXNzb2EiLCJUZW5hbnRLZXkiOiJBcGlQZXNzb2EiLCJuYmYiOjE2NTUyMDEwNDQsImV4cCI6MjEyODU4NjY0NCwiaWF0IjoxNjU1MjAxMDQ0fQ.30gGiEoml4c30Yuk0PGk1tKOW2fQ8i4PC9mmKXQ5GDPKQE2jydwNTWlIUUHwxm3Gf7kM5AuQmGmoIcoDo_y8Qg";
             var retorno = validateToken.ExecuteAsync(token).Result;
 
             Assert.True(retorno);
